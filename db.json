@@ -1,0 +1,20 @@
+{
+  "RentGo": [
+    {
+      "id": "39eb",
+      "name": "komallbaghel",
+      "contact": "76876876",
+      "pickuplocation": "kolar",
+      "dropofflocation": "new market",
+      "city": "suv"
+    },
+    {
+      "id": "8603",
+      "name": "pawani",
+      "contact": "1234566776",
+      "pickuplocation": "ashima",
+      "dropofflocation": "chetak",
+      "city": "hatchback"
+    }
+  ]
+}
