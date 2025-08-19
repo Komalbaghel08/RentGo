@@ -67,3 +67,7 @@ let del = (id) =>{
     let url =  `http://localhost:3000/RentGo/${id}`
     fetch(url, {method:"DELETE"})
 }
+
+
+
+
