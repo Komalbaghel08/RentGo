@@ -1,13 +1,11 @@
-// Elements
+// hamburger
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-// Hamburger toggle for mobile nav
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
   navLinks.classList.toggle("show");
+  hamburger.classList.toggle("active");
 });
-
 // SignUp Login section
 function openModal(type) {
   document.getElementById(type + "Modal").style.display = "flex";

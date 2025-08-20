@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentGo Navbar</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff6600;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      background: #ff6600;
+      border: none;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e55500;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .hamburger div {
+      width: 28px;
+      height: 3px;
+      background: #111;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        transition: max-height 0.4s ease;
+      }
+
+      .nav-links.active {
+        max-height: 400px; /* dropdown effect */
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="./index.html" id="idx">
+      <h1>RentGo</h1>
+    </a>
+    <nav>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="./home.html">Home</a>
+        <a href="./rent.html">Rent</a>
+        <a href="./service.html">Services</a>
+        <a href="./ride.html">Ride</a>
+        <a href="./contact.html">Contact</a>
+        <div class="nav-buttons">
+          <button class="btn" onclick="openModal('signup')">Sign Up</button>
+          <button class="btn" onclick="openModal('login')">Login</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Dummy function for buttons
+    function openModal(type) {
+      alert(type + " form open hoga!");
+    }
+  </script>
+
+</body>
+</html>
