@@ -4,7 +4,7 @@ const navLinks = document.getElementById("navLinks");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
-  hamburger.classList.toggle("active");
+  hamburger.classList.toggle("open");
 });
 // SignUp Login section
 function openModal(type) {
